@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {apiKey} from "../../../constance/apiKey";
+import {apiKey} from "../../../constants/apiKey";
 import {GenreListCard} from "./GenreListCard/GenreListCard";
 
 const GenresList = () => {
@@ -10,9 +10,6 @@ const GenresList = () => {
         headers: {
             accept: 'application/json',
             Authorization: apiKey
-        },
-        params: {
-            api_key: '388cefb94016e91a085e0dfd274a8ea5'
         }
     };
 

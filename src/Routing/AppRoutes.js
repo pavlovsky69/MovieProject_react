@@ -1,7 +1,7 @@
 export const AppRoutes={
-    MAIN:'/',
-    MoviesList:'/moviesList',
-    MovieInfo:'/movieInfo/',
-    GenreList:'/genresList',
-    MoviesPage:'/moviesList?page=:'
+    MainUrl:'/',
+    MoviesListUrl:'/moviesList',
+    MovieInfoUrl:'/movieInfo/',
+    GenreListUrl:'/genresList',
+    MoviesPageUrl:`/moviesList?page=:`
 }

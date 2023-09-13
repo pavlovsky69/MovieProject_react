@@ -1,7 +1,7 @@
 
 import style from './MovieListCard.module.scss';
 import {useNavigate} from "react-router-dom";
-import {urls} from "../../../constance/urls";
+import {urls} from "../../../constants/urls";
 
 
 

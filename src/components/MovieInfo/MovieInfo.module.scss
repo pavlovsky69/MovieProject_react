@@ -1,7 +1,11 @@
-.genres{
+.OneMoviesCard {
+  height: 400px;
   display: flex;
+  flex-direction: column;
+  margin: 10px;
 }
 
-.oneGenre{
-  padding: 0 5px 0 0;
+.PosterImage{
+  height: 350px;
 }
+

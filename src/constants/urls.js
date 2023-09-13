@@ -1,8 +1,10 @@
-const baseUrl = 'https://api.themoviedb.org/3';
+const baseURL = process.env.REACT_APP_API
+
 
 const moviesList = '/discover/movie';
 const moviesGenre = '/genre/movie/list';
 const moviesPoster='https://image.tmdb.org/t/p/w500'
+// const moviesImage=''
 
 const urls = {
     moviesList:{
@@ -17,4 +19,4 @@ const urls = {
     }
 }
 
-export {baseUrl,urls}
+export {baseURL,urls}

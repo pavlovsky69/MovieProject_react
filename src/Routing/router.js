@@ -1,33 +1,27 @@
-import {createBrowserRouter} from "react-router-dom";
-import {Header} from "../components/Header/Header";
-import {MoviesList} from "../components/MoviesList/MoviesList";
+import {createBrowserRouter, Navigate} from "react-router-dom";
 import {AppRoutes} from "./AppRoutes";
-import {MoviesPage} from "../components/MoviesList/MoviesPage/MoviesPage";
-import {GenresList} from "../components/GenreBadge/GenresList/GenresList";
-import {MovieInfo} from "../components/MovieInfo/MovieInfo";
+
+import {MainPage} from "../pages/MainPage";
+import {MoviesListPage} from "../pages/MoviesListPage";
+import {GenresPage} from "../pages/GenresPage";
+
 
 const router = createBrowserRouter ([
         {
-            path: AppRoutes.MAIN,
-            element:<Header/>,
-            children:[
+            path: AppRoutes.MainUrl,
+            element: <MainPage/>,
+            children: [
                 {
-                    path: AppRoutes.MoviesList,
-                    element:<MoviesList/>,
-                    children:[
-                        {
-                            path:AppRoutes.MoviesPage,
-                            element:<MoviesPage/>
-                        }
-                    ]
+                    index: true,
+                    element: <Navigate to={AppRoutes.MoviesListUrl}/>
                 },
                 {
-                    path:'/movieInfo/:id',
-                    element:<MovieInfo/>
+                    path:AppRoutes.MoviesListUrl,
+                    element:<MoviesListPage/>
                 },
                 {
-                    path:AppRoutes.GenreList,
-                    element:<GenresList/>
+                    path:AppRoutes.GenreListUrl,
+                    element:<GenresPage/>
                 }
             ]
 
