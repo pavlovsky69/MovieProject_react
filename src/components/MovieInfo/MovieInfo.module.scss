@@ -5,7 +5,46 @@
   margin: 10px;
 }
 
-.PosterImage{
+
+.PosterImage {
   height: 350px;
+  width: 250px;
+  object-fit: cover;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: 0.2s;
+}
+
+.PosterImage:hover {
+  height: 350px;
+  width: 250px;
+  object-fit: cover;
+  transition: 0.2s;
+  filter: none;
+  border: 1px solid snow;
+  box-sizing: border-box;
+  //box-shadow: 1px 1px 8px 1px #ffffff;
+  //box-shadow: 1px 1px 10px #ffffff;
+}
+
+.MovieTitle {
+  width: 246px;
+  color: #ececec;
+  font-size: 18px;
+  display: -webkit-box;
+  //flex-direction: column;
+  //justify-content: center;
+  //align-items: center;
+  //text-align: center;
+  margin-top: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-align: center;
+}
+
+.OneMoviesCard:hover {
+
 }
 

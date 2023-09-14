@@ -9,7 +9,7 @@ const MovieInfo = ({movie}) => {
         <div className={style.OneMoviesCard}>
             <img className={style.PosterImage} src={urls.moviesPoster.base+movie.poster_path} alt="logo"/>
             {/*<div>{id}</div>*/}
-            {/*<div>{title}</div>*/}
+            <div className={style.MovieTitle}>{title}</div>
 
         </div>
     );
@@ -50,7 +50,7 @@ export {MovieInfo};
 //         })
 //         .catch (err => console.error (err));
 // }, [])
-//
+
 // return (
 //     <div>
 //         <p>Title: {data.title}</p>

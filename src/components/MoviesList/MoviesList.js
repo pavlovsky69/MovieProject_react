@@ -4,31 +4,27 @@ import {moviesListActions} from "../../redux/slices/moviesListSlice";
 import {MovieInfo} from "../MovieInfo/MovieInfo";
 
 import style from "../MoviesList/MoviesList.module.scss"
+import {useSearchParams} from "react-router-dom";
 
 
 const MoviesList = () => {
     const dispatch = useDispatch ();
     const {moviesList} = useSelector (state => state.moviesList);
 
-    const [count, setCount] = useState (1)
-    const minus = () => {
-        setCount (count - 1)
-        if (count - 1 === 0) {
-            return setCount (1)
-        }
-    }
+    const [query, setQuery] = useSearchParams ({page: '1'})
+    const page = +query.get ('page')
+
 
     const plus = () => {
-        setCount (count + 1)
-        if (count + 1 === 500) {
-            return setCount (500)
-        }
+        setQuery(query+1)
+        return setQuery
     }
 
-    useEffect (() => {
-        dispatch (moviesListActions.getAll ({page: count}))
-    }, [count]);
+    console.log(page)
 
+    useEffect (() => {
+        dispatch (moviesListActions.getAll ({page}))
+    }, [page]);
 
     return (
         <div className={style.MovieListHead}>
@@ -36,8 +32,11 @@ const MoviesList = () => {
                 {moviesList.map (movie => <MovieInfo key={movie.id} movie={movie}/>)}
             </div>
             <div className={style.ButtonPage}>
+
+                {/*<button className={style.ButtonMinus} onClick={() => minus ()}>prev page</button>*/}
+                {/*<button className={style.ButtonPlus} onClick={() => plus ()}>next page</button>*/}
                 <button onClick={() => plus ()}>next page</button>
-                <button onClick={() => minus ()}>prev page</button>
+
             </div>
         </div>
     );
@@ -67,7 +66,7 @@ export {MoviesList};
 //             Authorization: apiKey
 //         },
 //         params: {
-//             api_key: '388cefb94016e91a085e0dfd274a8ea5'
+//
 //         }
 //     };
 //
@@ -96,16 +95,24 @@ export {MoviesList};
 // export {MoviesList};
 
 
-// const [count, setCount]=useState(1)
+// const dispatch = useDispatch ();
+// const {moviesList} = useSelector (state => state.moviesList);
+//
+// const [count, setCount] = useState (1)
 // const minus = () => {
 //     setCount (count - 1)
 //     if (count - 1 === 0) {
-//         return setCount (1)}}
+//         return setCount (1)
+//     }
+// }
 //
-// const plus =()=>{
+// const plus = () => {
 //     setCount (count + 1)
+//     if (count + 1 === 500) {
+//         return setCount (500)
+//     }
 // }
 //
 // useEffect (() => {
-//     dispatch(moviesListActions.getAll({page:count}))
+//     dispatch (moviesListActions.getAll({page: count}))
 // }, [count]);

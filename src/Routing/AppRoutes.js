@@ -3,5 +3,6 @@ export const AppRoutes={
     MoviesListUrl:'/moviesList',
     MovieInfoUrl:'/movieInfo/',
     GenreListUrl:'/genresList',
-    MoviesPageUrl:`/moviesList?page=:`
+    MoviesPageUrl:`/moviesList?page=:`,
+    SearchPage:'/search'
 }

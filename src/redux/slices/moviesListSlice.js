@@ -2,8 +2,10 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {moviesService} from "../../services/moviesService";
 
 const initialState = {
-    page: 1,
-    moviesList: []
+    page: 0,
+    moviesList: [],
+    nextPage:null,
+    prevPage: null
 };
 
 const getAll = createAsyncThunk (
@@ -25,7 +27,9 @@ const getAll = createAsyncThunk (
 const slice = createSlice ({
     name: 'moviesListSlice',
     initialState,
-    reducers: {},
+    reducers: {
+
+    },
     extraReducers: builder => builder
         .addCase (getAll.fulfilled, (state, action) => {
             const {page, results} = action.payload;
