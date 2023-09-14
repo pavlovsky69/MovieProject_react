@@ -15,12 +15,21 @@ const MoviesList = () => {
     const page = +query.get ('page')
 
 
-    const plus = () => {
-        setQuery(query+1)
-        return setQuery
+
+    const nextPage = () => {
+        setQuery (prev => {
+            prev.set ('page', (+prev.get ('page') + 1).toString ())
+            return prev;
+        })
+    }
+    const prevPage = () => {
+        setQuery (prev => {
+            prev.set ('page', (+prev.get ('page') - 1).toString ())
+            return prev;
+        })
     }
 
-    console.log(page)
+    console.log (page)
 
     useEffect (() => {
         dispatch (moviesListActions.getAll ({page}))
@@ -33,9 +42,9 @@ const MoviesList = () => {
             </div>
             <div className={style.ButtonPage}>
 
-                {/*<button className={style.ButtonMinus} onClick={() => minus ()}>prev page</button>*/}
-                {/*<button className={style.ButtonPlus} onClick={() => plus ()}>next page</button>*/}
-                <button onClick={() => plus ()}>next page</button>
+                <button disabled={page===1} className={style.ButtonPlus} onClick={() => prevPage ()}>prev page</button>
+                <button disabled={page===500} className={style.ButtonMinus} onClick={() => nextPage ()}>next page</button>
+
 
             </div>
         </div>
@@ -43,6 +52,21 @@ const MoviesList = () => {
 };
 
 export {MoviesList};
+
+
+
+
+
+
+// const prevPage = () => {
+//     setQuery (prev => {
+//         prev.set ('page', (+prev.get ('page') - 1).toString ())
+//         return prev;
+//     })
+// }
+
+
+
 
 
 // const MoviesList = () => {
