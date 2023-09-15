@@ -29,8 +29,6 @@ const MoviesList = () => {
         })
     }
 
-    console.log (page)
-
     useEffect (() => {
         dispatch (moviesListActions.getAll ({page}))
     }, [page]);
@@ -52,6 +50,9 @@ const MoviesList = () => {
 };
 
 export {MoviesList};
+
+
+
 
 
 

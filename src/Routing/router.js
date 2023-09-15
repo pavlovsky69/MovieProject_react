@@ -5,6 +5,7 @@ import {MainPage} from "../pages/MainPage";
 import {MoviesListPage} from "../pages/MoviesListPage";
 import {GenresPage} from "../pages/GenresPage";
 import {SearchPage} from "../pages/SearchPage";
+import {MoviePage} from "../pages/MoviePage";
 
 
 const router = createBrowserRouter ([
@@ -27,6 +28,10 @@ const router = createBrowserRouter ([
                 {
                     path:AppRoutes.SearchPage,
                     element:<SearchPage/>
+                },
+                {
+                    path:'/movie/:id',
+                    element:<MoviePage/>
                 }
             ]
 

@@ -28,7 +28,6 @@ const slice = createSlice ({
     name: 'moviesListSlice',
     initialState,
     reducers: {
-
     },
     extraReducers: builder => builder
         .addCase (getAll.fulfilled, (state, action) => {

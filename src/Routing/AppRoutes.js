@@ -4,5 +4,6 @@ export const AppRoutes={
     MovieInfoUrl:'/movieInfo/',
     GenreListUrl:'/genresList',
     MoviesPageUrl:`/moviesList?page=:`,
-    SearchPage:'/search'
+    SearchPage:'/search',
+    OneMovie:'/movie/'
 }
