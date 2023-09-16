@@ -40,10 +40,8 @@ const MoviesList = () => {
             </div>
             <div className={style.ButtonPage}>
 
-                <button disabled={page===1} className={style.ButtonPlus} onClick={() => prevPage ()}>prev page</button>
-                <button disabled={page===500} className={style.ButtonMinus} onClick={() => nextPage ()}>next page</button>
-
-
+                <button disabled={page===1} className={style.ButtonMinus} onClick={() => prevPage ()}>Prev Page</button>
+                <button disabled={page===500} className={style.ButtonPlus} onClick={() => nextPage ()}>Next Page</button>
             </div>
         </div>
     );

@@ -7,7 +7,7 @@ import {movieReducer} from "./slices/OneMovieSlice";
 const store = configureStore ({
     reducer: {
         moviesList:moviesListReducer,
-        OneMovie:movieReducer
+        Movie:movieReducer
     }
 })
 

@@ -2,7 +2,8 @@
 const OneMovie = () => {
     return (
         <div>
-            OneMovie12
+            <div>
+            </div>
         </div>
     );
 };

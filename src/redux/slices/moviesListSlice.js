@@ -1,11 +1,9 @@
-import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice, isFulfilled, isPending} from "@reduxjs/toolkit";
 import {moviesService} from "../../services/moviesService";
 
 const initialState = {
     page: 0,
-    moviesList: [],
-    nextPage:null,
-    prevPage: null
+    moviesList: []
 };
 
 const getAll = createAsyncThunk (

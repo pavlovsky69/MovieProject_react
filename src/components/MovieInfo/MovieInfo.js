@@ -5,12 +5,12 @@ import {AppRoutes} from "../../Routing/AppRoutes";
 
 
 const MovieInfo = ({movie}) => {
-    const {id, title, poster_path}=movie;
-    const navigate=useNavigate();
+    const {id, title, poster_path} = movie;
+    const navigate = useNavigate ();
 
     return (
-        <div className={style.OneMoviesCard} onClick={()=>navigate(AppRoutes.OneMovie+(id))}>
-            <img className={style.PosterImage} src={urls.moviesPoster.base+movie.poster_path} alt="logo"/>
+        <div className={style.OneMoviesCard} onClick={() => navigate (AppRoutes.OneMovie + (id))}>
+            <img className={style.PosterImage} src={urls.moviesPoster.base + movie.poster_path} alt="logo"/>
             {/*<div>{id}</div>*/}
             <div className={style.MovieTitle}>{title}</div>
 
@@ -19,14 +19,6 @@ const MovieInfo = ({movie}) => {
 };
 
 export {MovieInfo};
-
-
-
-
-
-
-
-
 
 
 // const params = useParams ()

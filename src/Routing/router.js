@@ -6,6 +6,7 @@ import {MoviesListPage} from "../pages/MoviesListPage";
 import {GenresPage} from "../pages/GenresPage";
 import {SearchPage} from "../pages/SearchPage";
 import {MoviePage} from "../pages/MoviePage";
+import {OneMovie} from "../components/OneMovie/OneMovie";
 
 
 const router = createBrowserRouter ([
