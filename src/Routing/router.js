@@ -6,7 +6,6 @@ import {MoviesListPage} from "../pages/MoviesListPage";
 import {GenresPage} from "../pages/GenresPage";
 import {SearchPage} from "../pages/SearchPage";
 import {MoviePage} from "../pages/MoviePage";
-import {OneMovie} from "../components/OneMovie/OneMovie";
 
 
 const router = createBrowserRouter ([
@@ -19,20 +18,20 @@ const router = createBrowserRouter ([
                     element: <Navigate to={AppRoutes.MoviesListUrl}/>
                 },
                 {
-                    path:AppRoutes.MoviesListUrl,
-                    element:<MoviesListPage/>
+                    path: AppRoutes.MoviesListUrl,
+                    element: <MoviesListPage/>
                 },
                 {
-                    path:AppRoutes.GenreListUrl,
-                    element:<GenresPage/>
+                    path: AppRoutes.GenreListUrl,
+                    element: <GenresPage/>
                 },
                 {
-                    path:AppRoutes.SearchPage,
-                    element:<SearchPage/>
+                    path: AppRoutes.SearchPage,
+                    element: <SearchPage/>
                 },
                 {
-                    path:'/movie/:id',
-                    element:<MoviePage/>
+                    path: '/movie/:id',
+                    element: <MoviePage/>
                 }
             ]
 

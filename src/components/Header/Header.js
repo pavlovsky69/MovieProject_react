@@ -4,6 +4,7 @@ import style from './Header.module.scss'
 import {AppRoutes} from "../../Routing/AppRoutes";
 
 const Header = () => {
+
     return (
         <div>
             <div className={style.headerBar}>

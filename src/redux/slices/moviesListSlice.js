@@ -14,7 +14,7 @@ const getAll = createAsyncThunk (
             return data
         } catch
             (e) {
-            return thunkAPI.rejectWithValue(e.response.data)
+            return thunkAPI.rejectWithValue (e.response.data)
         } finally {
 
         }
@@ -25,8 +25,7 @@ const getAll = createAsyncThunk (
 const slice = createSlice ({
     name: 'moviesListSlice',
     initialState,
-    reducers: {
-    },
+    reducers: {},
     extraReducers: builder => builder
         .addCase (getAll.fulfilled, (state, action) => {
             const {page, results} = action.payload;
