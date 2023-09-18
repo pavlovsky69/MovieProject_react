@@ -32,6 +32,9 @@ const MoviesList = () => {
         dispatch (moviesListActions.getAll({page}))
     },[page]);
 
+
+
+
     return (
         <div className={style.MovieListHead}>
             <div className={style.MoviesCard}>
@@ -43,6 +46,7 @@ const MoviesList = () => {
                 </button>
                 <button disabled={page === 500} className={style.ButtonPlus} onClick={() => nextPage ()}>Next Page
                 </button>
+                <div></div>
             </div>
         </div>
     );

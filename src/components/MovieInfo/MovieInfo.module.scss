@@ -1,8 +1,9 @@
 .OneMoviesCard {
-  height: 400px;
+  height: 430px;
   display: flex;
   flex-direction: column;
   margin: 10px;
+  cursor: pointer;
 }
 
 
@@ -21,7 +22,7 @@
   object-fit: cover;
   transition: 0.2s;
   filter: none;
-  border: 1px solid snow;
+  border: 1px solid #ffd700;
   box-sizing: border-box;
   //box-shadow: 1px 1px 8px 1px #ffffff;
   //box-shadow: 1px 1px 10px #ffffff;
@@ -29,22 +30,27 @@
 
 .MovieTitle {
   width: 246px;
-  color: #ececec;
   font-size: 18px;
   display: -webkit-box;
-  //flex-direction: column;
-  //justify-content: center;
-  //align-items: center;
-  //text-align: center;
   margin-top: 8px;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   text-align: center;
+  cursor: pointer;
 }
 
 .OneMoviesCard:hover {
 
+}
+
+.StarsElement{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Stars{
 }
 

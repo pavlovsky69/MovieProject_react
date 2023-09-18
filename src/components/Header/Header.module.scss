@@ -1,13 +1,29 @@
-.button{
+.button {
+  display: block;
   text-decoration: none;
   font-size: 30px;
   color: snow;
 }
-.headerBar{
+
+.button:hover {
+  color: #ffd700;
+}
+
+.headerBar {
   width: 100vw;
   height: 12vh;
-  background-color: #272727;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.themeSwitcher {
+  position: absolute;
+  width: 150px;
+  height: 10px;
+  top: 3.6vh;
+  left: 2vh;
+}
+
+.switch{
 }
