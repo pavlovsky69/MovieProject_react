@@ -1,8 +1,12 @@
+.HeaderMain {
+}
+
 .button {
-  display: block;
+  //display: block;
   text-decoration: none;
   font-size: 30px;
   color: snow;
+  margin: 0 1% 0 1%;
 }
 
 .button:hover {
@@ -10,20 +14,66 @@
 }
 
 .headerBar {
-  width: 100vw;
-  height: 12vh;
+  position: relative;
+  width: 100%;
+  height: 13vh;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  background-image: url("https://klike.net/uploads/posts/2022-10/1666928437_3-3.jpg");
+  background-repeat: no-repeat, repeat;
+  background-position: top;
+  background-size: cover;
+  background-color: #00ff2c;
+  background-blend-mode: darken;
+  //border-bottom: 2px solid #ffd700;
 }
 
 .themeSwitcher {
   position: absolute;
   width: 150px;
   height: 10px;
-  top: 3.6vh;
-  left: 2vh;
+  top: 50%;
+  right: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.switch{
+.switch {
+}
+
+.titleClass {
+  position: absolute;
+  left: 2vw;
+  cursor: pointer;
+}
+
+.titleH1 {
+  color: snow;
+}
+
+.titleTheme {
+  color: #ffd700;
+}
+
+.logoUser {
+  position: absolute;
+  right: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageUser {
+  display: block;
+  width: 3.5vw;
+}
+
+.userTitle {
+  display: block;
+  margin: 0.5vh 0 0 0;
+  padding: 0;
+  color: var(--accent-light);
 }

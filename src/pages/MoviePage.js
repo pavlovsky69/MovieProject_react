@@ -4,6 +4,7 @@ import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {movieActions} from "../redux/slices/OneMovieSlice";
 import {urls} from "../constants/urls";
+import {Box, LinearProgress} from "@mui/material";
 
 
 const MoviePage = () => {
@@ -19,7 +20,9 @@ const MoviePage = () => {
     return (
         <div>
             <Header/>
-            {isLoading ? <h1>Loading.......</h1> : <div>
+            {isLoading ? <Box sx={{ width: '100%' }} color="primary">
+                <LinearProgress />
+            </Box> : <div>
                 <p>{movie.title}</p>
                 <p>Бюджет: {movie.budget}</p>
                 <div> Жанр:
@@ -31,7 +34,6 @@ const MoviePage = () => {
                 <p></p>
                 <p></p>
             </div>}
-
         </div>
     );
 };

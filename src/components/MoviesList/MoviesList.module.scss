@@ -1,6 +1,6 @@
 .MovieListHead {
-  margin: 0;
-  width: 100vw;
+  margin: 15px 0 0 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,10 +8,11 @@
 }
 
 .MoviesCard {
-  width: 1440px;
+  width: 90%;
   height: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 
 }
@@ -26,31 +27,33 @@
   width: 200px;
   height: 50px;
   margin-left: 30px;
-  background-color: transparent;
-  border: 1px solid snow;
+  background-color: #ffd700;
+  border: 1px solid rgba(0, 250, 44);;
   cursor: pointer;
-  color: snow;
   font-size: 20px;
+  color: var(--acctnt-dark);
 }
 
 .ButtonMinus{
   width: 200px;
   height: 50px;
-  background-color: transparent;
-  border: 1px solid snow;
+  background-color: #ffd700;
+  border: 1px solid rgba(0, 250, 44);;
   margin-right: 30px;
   cursor: pointer;
-  color: snow;
   font-size: 20px;
+  color: var(--acctnt-dark);
 }
 
 .ButtonPlus:hover{
   //background-color: #ffd700;
-  background-color:rgba(255, 215, 0, 0.3);
+  background-color: rgba(0, 250, 44);
   border: 1px solid snow;
+  color: var(--accent-light);
 }
 
 .ButtonMinus:hover{
-  background-color:rgba(255, 215, 0, 0.3);
+  background-color: rgba(0, 250, 44);
   border: 1px solid snow;
+  color: var(--accent-light);
 }

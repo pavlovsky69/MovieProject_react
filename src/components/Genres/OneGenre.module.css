@@ -1,0 +1,26 @@
+
+.MainGenreBlock{
+    width: 19%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.GenreTitleBlock{
+}
+
+.TitleGenre{
+    text-align: center;
+}
+
+.MainGenreBlock:hover {
+    transition: 0.3s;
+    background-color: #464646;
+    border: 1px solid #ffd700;
+    padding: 0;
+    margin: 0;
+}

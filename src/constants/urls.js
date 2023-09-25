@@ -3,7 +3,9 @@ const baseURL = process.env.REACT_APP_API
 const movie = '/movie'
 const moviesList = '/discover/movie';
 const moviesGenre = '/genre/movie/list';
-const moviesPoster = 'https://image.tmdb.org/t/p/w500'
+const moviesPoster = 'https://image.tmdb.org/t/p/w500';
+const genresList='/genre/movie/list';
+// const moviesPoster = 'https://image.tmdb.org/t/p/w500';
 
 
 const urls = {
@@ -19,6 +21,9 @@ const urls = {
     },
     movie: {
         byId: (id) => `${movie}/${id}`
+    },
+    genresList:{
+        base:genresList
     }
 }
 

@@ -1,9 +1,9 @@
 .black{
-    background-color:  #272727;
-    color: snow;
+    background-color:  var(--bg-dark);
+    color:var(--accent-light);
 }
 
 .white{
-    background-color: snow;
-    color: #272727;
+    background-color: var(--bg-light);
+    color: var(--acctnt-dark);
 }
