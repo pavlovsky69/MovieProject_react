@@ -4,6 +4,7 @@ import {movieReducer} from "./slices/OneMovieSlice";
 import {themeReducer} from "./slices/themeSlice";
 import {genresListReducer} from "./slices/GenreListSlice";
 import {progressReducer} from "./slices/progressSlice";
+import {GenresByIdReducer} from "./slices/GenresByIdSlice";
 
 
 
@@ -13,6 +14,7 @@ const store = configureStore ({
         Movie:movieReducer,
         theme:themeReducer,
         genresList:genresListReducer,
+        genresById:GenresByIdReducer,
         progress: progressReducer
     }
 })

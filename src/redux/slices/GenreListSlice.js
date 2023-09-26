@@ -1,5 +1,4 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {moviesService} from "../../services/moviesService";
 import {genreService} from "../../services/genreService";
 
 
