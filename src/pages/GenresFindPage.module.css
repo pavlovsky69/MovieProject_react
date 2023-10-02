@@ -47,7 +47,7 @@
     border: 1px solid rgba(0, 250, 44);;
     cursor: pointer;
     font-size: 20px;
-    color: var(--acctnt-dark);
+    color: var(--accent-dark);
 }
 
 .ButtonMinus{
@@ -58,7 +58,7 @@
     margin-right: 30px;
     cursor: pointer;
     font-size: 20px;
-    color: var(--acctnt-dark);
+    color: var(--accent-dark);
 }
 
 .ButtonPlus:hover{
