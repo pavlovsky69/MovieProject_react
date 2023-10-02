@@ -3,7 +3,7 @@ import {moviesService} from "../../services/moviesService";
 import {progressActions} from "./progressSlice";
 
 const initialState = {
-    page: 0,
+    page: '2',
     moviesList: [],
     isLoading: null
 };

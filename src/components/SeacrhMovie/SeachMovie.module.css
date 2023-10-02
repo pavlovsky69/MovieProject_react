@@ -1,0 +1,19 @@
+.MainBox{
+    display: flex;
+    justify-content: center;
+}
+.MyForm{
+    width: 500px;
+
+}
+.Input{
+    margin: 20px 0 0 20px;
+    width: 20vw;
+}
+
+.TitleSearchQuery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh 0 0 0;
+}

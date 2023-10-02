@@ -4,10 +4,12 @@ import {useEffect} from "react";
 import {genresListAction} from "../redux/slices/GenreListSlice";
 import {OneGenre} from "../components/Genres/OneGenre";
 import style from './GenresPage.module.css'
+import {Box, LinearProgress} from "@mui/material";
 
 
 const GenresPage = () => {
     const dispatch = useDispatch ();
+    const {isLoading} = useSelector (state => state.genresList)
     const {genresList} = useSelector (state => state.genresList)
 
 
@@ -18,11 +20,13 @@ const GenresPage = () => {
     return (
         <div>
             <Header/>
-            <div className={style.GenresContainer}>
+            {isLoading ? <Box sx={{width: '100%'}} color="primary">
+                <LinearProgress/>
+            </Box> : <div className={style.GenresContainer}>
                 <div className={style.GenresListBlock}>
                     {genresList.map (genre => <OneGenre key={genre.id} genre={genre}/>)}
                 </div>
-            </div>
+            </div>}
         </div>
     );
 };

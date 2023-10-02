@@ -5,6 +5,7 @@ import {themeReducer} from "./slices/themeSlice";
 import {genresListReducer} from "./slices/GenreListSlice";
 import {progressReducer} from "./slices/progressSlice";
 import {GenresByIdReducer} from "./slices/GenresByIdSlice";
+import {searchReducer} from "./slices/searchSlice";
 
 
 
@@ -15,7 +16,9 @@ const store = configureStore ({
         theme:themeReducer,
         genresList:genresListReducer,
         genresById:GenresByIdReducer,
-        progress: progressReducer
+        progress: progressReducer,
+        search: searchReducer,
+        searchCheck: searchReducer
     }
 })
 

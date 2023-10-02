@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.MainBox{
+    height: 100vh;
+}
+
+p {
+    font-size: 18px;
+}
+.boldTextP{
+    font-weight: bold;
+
+}
+
+.ContainerBox {
+    display: flex;
+    margin: 5vh 0 0 3vw
+}
+
+
+.TextContainerBox {
+    margin: 0 0 0 2vw;
+}
+
+.GenreTitleBlock {
+    margin-top: 2px;
+
+}
+
+.GenreTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.GenreTitleP {
+    cursor: pointer;
+    color: rgba(0, 250, 44);
+    margin-left: 1vw;
+    background-color: var(--bg-dark);
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.ImagePoster {
+
+}
+
+.Poster {
+    border: 1px solid #ffd700;
+    border-radius: 10px;
+}
+
+.RatingBox {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.RatingName {
+    padding-right: 10px;
+    align-items: center;
+}
+
+.Information {
+    margin-top: 25px;
+}
+
+.OverviewBlock {
+    margin: 15px 0 0 3vw;
+    max-width: 80%;
+}
+
+.OverviewText{
+    margin-top:5px;
+}
+
+.smallInfo{
+    margin-top: 5px;
+}

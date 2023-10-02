@@ -20,10 +20,16 @@ const urls = {
         base: moviesPoster
     },
     movie: {
-        byId: (id) => `${movie}/${id}`
+        byId: (id) => `${movie}/${id}`,
+        byOneGenre:(id, page)=>`${moviesList}?with_genres=${id}&page=${page}`
     },
     genresList:{
-        base:genresList
+        base:genresList,
+
+    },
+    searchMovies:{
+        base:(query)=>`${baseURL}/search/movie?`
+        // base:(query)=>`${baseURL}/search/movie?query=${query}`
     }
 }
 

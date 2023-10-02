@@ -1,9 +1,10 @@
-import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice, isFulfilled, isPending} from "@reduxjs/toolkit";
 import {genreService} from "../../services/genreService";
 
 
 const initialState = {
-    genresList: []
+    genresList: [],
+    isLoading: null
 }
 
 
@@ -29,8 +30,15 @@ const genresListSlice = createSlice ({
     reducers: {},
     extraReducers: builder => builder
         .addCase (getAllGenres.fulfilled, (state, action) => {
-            const {genres} = action.payload
+            const {genres, isLoading} = action.payload
             state.genresList = genres
+            state.isLoading=isLoading
+        })
+        .addMatcher (isPending (), state => {
+            state.isLoading = true
+        })
+        .addMatcher (isFulfilled (), state => {
+            state.isLoading = false
         })
 })
 

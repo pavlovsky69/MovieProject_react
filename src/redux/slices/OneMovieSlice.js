@@ -2,7 +2,7 @@ import {createAsyncThunk, createSlice, isFulfilled, isPending} from "@reduxjs/to
 import {moviesService} from "../../services/moviesService";
 
 const initialState = {
-    id: 0,
+    id: null,
     movie: {},
     isLoading: null
 };

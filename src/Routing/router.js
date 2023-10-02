@@ -27,7 +27,8 @@ const router = createBrowserRouter ([
                     element: <GenresPage/>
                 },
                 {
-                    path: AppRoutes.SearchPage,
+                    // path: AppRoutes.SearchPage,
+                    path: '/search/:query',
                     element: <SearchPage/>
                 },
                 {

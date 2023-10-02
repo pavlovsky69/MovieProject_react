@@ -1,19 +1,25 @@
-import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice, isFulfilled, isPending} from "@reduxjs/toolkit";
 import {genreService} from "../../services/genreService";
+import {moviesService} from "../../services/moviesService";
 
 
 const initialState = {
-    id:'14',
-    page: '1',
-    genresById: []
+    id:null,
+    page: 1,
+    genresById: [],
+    isLoading: null
 }
 
 const getByGenre = createAsyncThunk (
     'getByGenre',
     async ({id, page}, thunkAPI) => {
         try {
-            const {data} = await genreService.getByGenre (id, page);
+            const {data} = await moviesService.getByOneGenre(id, page)
             return data
+
+            // try {
+            //     const {data} = await genreService.getByGenre (id,page);
+            //     return data
         } catch
             (e) {
             return thunkAPI.rejectWithValue (e.response.data)
@@ -30,10 +36,17 @@ const GenresByIdSlice = createSlice ({
     reducers: {},
     extraReducers: builder => builder
         .addCase (getByGenre.fulfilled, (state, action) => {
-            const {results, id, page} = action.payload;
+            const {results, id, page, isLoading} = action.payload;
             state.genresById = results
             state.id=id
             state.page=page
+            state.isLoading=isLoading
+        })
+        .addMatcher (isPending (), state => {
+            state.isLoading = true
+        })
+        .addMatcher (isFulfilled (), state => {
+            state.isLoading = false
         })
 })
 
