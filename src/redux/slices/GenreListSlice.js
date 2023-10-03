@@ -18,7 +18,6 @@ const getAllGenres = createAsyncThunk (
             (e) {
             return thunkAPI.rejectWithValue (e.response.data)
         } finally {
-
         }
 
     }
@@ -32,14 +31,14 @@ const genresListSlice = createSlice ({
         .addCase (getAllGenres.fulfilled, (state, action) => {
             const {genres, isLoading} = action.payload
             state.genresList = genres
-            state.isLoading=isLoading
+            state.isLoading = isLoading
         })
-        .addMatcher (isPending (), state => {
-            state.isLoading = true
-        })
-        .addMatcher (isFulfilled (), state => {
-            state.isLoading = false
-        })
+    .addMatcher (isPending (), state => {
+        state.isLoading = true
+    })
+    .addMatcher (isFulfilled (), state => {
+        state.isLoading = false
+    })
 })
 
 

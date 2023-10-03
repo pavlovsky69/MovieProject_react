@@ -16,12 +16,14 @@ p {
 }
 
 .ContainerBox {
+    width: 100%;
     display: flex;
     margin: 5vh 0 0 3vw
 }
 
 
 .TextContainerBox {
+    width: 70%;
     margin: 0 0 0 2vw;
 }
 

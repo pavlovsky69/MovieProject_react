@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink, Outlet, useNavigate} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import style from './Header.module.scss'
 import {AppRoutes} from "../../Routing/AppRoutes";
 import {Switch} from "@mui/material";
@@ -11,7 +11,7 @@ import {SearchMovie} from "../SeacrhMovie/SearchMovie";
 
 const Header = () => {
     const {themeCheck} = useSelector (state => state.theme);
-    const {searchCheck}=useSelector(state => state.searchCheck)
+    const {searchCheck} = useSelector (state => state.searchCheck)
     const dispatch = useDispatch ();
     const navigate = useNavigate ();
 
@@ -25,7 +25,9 @@ const Header = () => {
                     </div>
                     <NavLink className={style.button} to={AppRoutes.MainUrl}>Movies</NavLink>
                     <NavLink className={style.button} to={AppRoutes.GenreListUrl}>Genres</NavLink>
-                    <button className={style.button1} onClick={() => dispatch (searchActions.changeSearchCheck())}>Search</button>
+                    <button className={style.button1}
+                            onClick={() => dispatch (searchActions.changeSearchCheck ())}>Search
+                    </button>
                     {/*<NavLink className={style.button} to={AppRoutes.SearchPage}>Search</NavLink>*/}
                     <div className={style.themeSwitcher}>
                         <Switch className={style.switch} defaultChecked={themeCheck}
@@ -39,21 +41,12 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            {searchCheck && <SearchMovie/>}
+                {searchCheck && <SearchMovie/>}
         </div>
     );
 };
 
 export {Header};
-
-
-
-
-// {
-//     isLoading && (<Box sx={{ width: '100%', height: '10%'}}>
-//         <LinearProgress />
-//     </Box>)
-// }
 
 
 

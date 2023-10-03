@@ -1,6 +1,7 @@
 import {createAsyncThunk, createSlice, isFulfilled, isPending} from "@reduxjs/toolkit";
 import {genreService} from "../../services/genreService";
 import {moviesService} from "../../services/moviesService";
+import {progressActions} from "./progressSlice";
 
 
 const initialState = {
@@ -14,17 +15,15 @@ const getByGenre = createAsyncThunk (
     'getByGenre',
     async ({id, page}, thunkAPI) => {
         try {
+            thunkAPI.dispatch (progressActions.setIsLoading (true))
             const {data} = await moviesService.getByOneGenre(id, page)
             return data
 
-            // try {
-            //     const {data} = await genreService.getByGenre (id,page);
-            //     return data
         } catch
             (e) {
             return thunkAPI.rejectWithValue (e.response.data)
         } finally {
-
+            thunkAPI.dispatch (progressActions.setIsLoading (false))
         }
     }
 )
@@ -42,12 +41,12 @@ const GenresByIdSlice = createSlice ({
             state.page=page
             state.isLoading=isLoading
         })
-        .addMatcher (isPending (), state => {
-            state.isLoading = true
-        })
-        .addMatcher (isFulfilled (), state => {
-            state.isLoading = false
-        })
+        // .addMatcher (isPending (), state => {
+        //     state.isLoading = true
+        // })
+        // .addMatcher (isFulfilled (), state => {
+        //     state.isLoading = false
+        // })
 })
 
 const {reducer: GenresByIdReducer, actions} = GenresByIdSlice;

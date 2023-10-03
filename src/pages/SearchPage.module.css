@@ -1,17 +1,17 @@
-.MainBlockSearch{
+.MainBlockSearch {
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.TitleSearchQuery{
+.TitleSearchQuery {
     display: flex;
     align-items: center;
     margin: 1.5em 0 0 0;
 }
 
-.MovieListHead{
+.MovieListHead {
     margin: 15px 0 0 0;
     width: 100%;
     display: flex;
@@ -20,7 +20,7 @@
     align-items: center;
 }
 
-.MoviesCard{
+.MoviesCard {
     width: 90%;
     height: auto;
     display: flex;
@@ -30,3 +30,67 @@
 }
 
 
+.ButtonPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ButtonPlus {
+    width: 200px;
+    height: 50px;
+    margin-left: 30px;
+    background-color: #ffd700;
+    border: 1px solid rgba(0, 250, 44);;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--accent-dark);
+}
+
+.ButtonMinus {
+    width: 200px;
+    height: 50px;
+    background-color: #ffd700;
+    border: 1px solid rgba(0, 250, 44);
+    margin-right: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--accent-dark);
+}
+
+.ButtonPlus:hover {
+    background-color: rgba(0, 250, 44);
+    border: 1px solid snow;
+    color: snow;
+}
+
+.ButtonMinus:hover {
+    background-color: rgba(0, 250, 44);
+    border: 1px solid snow;
+    color: snow;
+}
+
+.ButtonMinus:not([hover]):disabled {
+    background-color: #5a5a5a;
+    border: none;
+    color: var(--accent-dark);
+    cursor: auto;
+}
+
+.ButtonPlus:not([hover]):disabled {
+    background-color: #5a5a5a;
+    border: none;
+    color: var(--accent-dark);
+    cursor: auto;
+}
+
+.CurrentPage {
+    position: absolute;
+    left: 100px;
+}
+
+.TotalPage {
+    position: absolute;
+    right: 100px;
+}

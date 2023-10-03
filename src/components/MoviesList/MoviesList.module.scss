@@ -30,29 +30,51 @@
   border: 1px solid rgba(0, 250, 44);;
   cursor: pointer;
   font-size: 20px;
-  color: var(--acctnt-dark);
+  color: var(--accent-dark);
 }
 
 .ButtonMinus{
   width: 200px;
   height: 50px;
   background-color: #ffd700;
-  border: 1px solid rgba(0, 250, 44);;
+  border: 1px solid rgba(0, 250, 44);
   margin-right: 30px;
   cursor: pointer;
   font-size: 20px;
-  color: var(--acctnt-dark);
+  color: var(--accent-dark);
+}
+
+.ButtonPlus:disabled{
+  background-color: #5a5a5a;
+  border: none;
 }
 
 .ButtonPlus:hover{
-  //background-color: #ffd700;
   background-color: rgba(0, 250, 44);
   border: 1px solid snow;
-  color: var(--accent-light);
+  color: snow;
 }
 
 .ButtonMinus:hover{
   background-color: rgba(0, 250, 44);
   border: 1px solid snow;
-  color: var(--accent-light);
+  color: snow;
 }
+
+.ButtonMinus:not([hover]):disabled{
+  background-color: #5a5a5a;
+  border: none;
+  color: var(--accent-dark);
+  cursor: auto;
+}
+
+.ButtonPlus:not([hover]):disabled{
+  background-color: #5a5a5a;
+  border: none;
+  color: var(--accent-dark);
+  cursor: auto;
+}
+
+//.btn:not([disabled]):hover{
+//  cursor: pointer
+//}

@@ -1,34 +1,24 @@
-import {useForm, useFormState} from "react-hook-form";
+import {useForm} from "react-hook-form";
 import style from './SeachMovie.module.css'
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {searchActions} from "../../redux/slices/searchSlice";
-import {MovieInfo} from "../MovieInfo/MovieInfo";
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import {AppRoutes} from "../../Routing/AppRoutes";
-import {isDisabled} from "@testing-library/user-event/dist/utils";
+import {searchByPageActions} from "../../redux/slices/searchByPageSlice";
 
 const SearchMovie = () => {
     const navigate=useNavigate();
     const dispatch = useDispatch ();
-    const {searchCheck}=useSelector(state => state.searchCheck)
-    // const {searchList} = useSelector (state => state.search)
-    const {register, handleSubmit, formState:{errors, isValid}, reset} = useForm (
+    const {register, handleSubmit, formState:{isValid}, reset} = useForm (
     );
 
-
-    // const search = async ({query}) => {
-    //     await dispatch(searchActions.getByQuery({query}))
-    //     reset ()
-    // }
 
     const search = ({query}) => {
         navigate ('/search/' + (query))
         reset ()
+        dispatch(searchByPageActions.resetPageCount())
         dispatch (searchActions.changeSearchCheck())
-
     }
-
 
 
     return (
@@ -45,14 +35,6 @@ const SearchMovie = () => {
 };
 
 export {SearchMovie};
-
-
-
-
-
-
-
-
 
 
 // useEffect (() => {

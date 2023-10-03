@@ -9,9 +9,6 @@ const MovieInfo = ({movie}) => {
     const {id, title, poster_path, vote_average} = movie;
     const navigate = useNavigate ();
 
-    // const imageLoader=()=>{
-    //
-    // }
 
     return (
             <div className={style.OneMoviesCard}>
@@ -35,21 +32,3 @@ const MovieInfo = ({movie}) => {
 };
 
 export {MovieInfo};
-
-
-//
-// <div className={style.OneMoviesCard}>
-//     {/*<img className={style.PosterImage} onClick={() => navigate (AppRoutes.movie + (id))} src={imageUrls.moviesPoster.base + movie.poster_path} alt="logo"/>*/}
-//     <img className={style.PosterImage} onClick={() => navigate (AppRoutes.movie + (id))}  src={urls.moviesPoster.base + movie.poster_path} alt="logo"/>
-//     <div className={style.MovieTitle}>{title}</div>
-//     <div className={style.StarsElement}>
-//         <ReactStars
-//             count={10}
-//             value={vote_average}
-//             size={23}
-//             activeColor="#ffd700"
-//             isHalf={true}
-//             edit={false}
-//             classNames={style.Stars}
-//         />
-//     </div>

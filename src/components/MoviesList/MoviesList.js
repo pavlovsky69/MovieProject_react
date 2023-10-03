@@ -14,12 +14,12 @@ const MoviesList = () => {
 
     // const {isLoading} = useSelector(state => state.progress);
 
-    const {isLoading} = useSelector (state => state.moviesList)
+    const {isLoading} = useSelector (state => state.progress)
+    // const {isLoading} = useSelector (state => state.moviesList)
 
     // const [query, setQuery] = useSearchParams ({page})
     const [query, setQuery] = useSearchParams ({page: '1'})
     const page = query.get ('page')
-
 
 
     const nextPage = () => {
@@ -31,7 +31,8 @@ const MoviesList = () => {
     const prevPage = () => {
         setQuery (prev => {
             prev.set ('page', (+prev.get ('page') - 1).toString ())
-            return prev;})
+            return prev;
+        })
     }
 
     useEffect (() => {
@@ -41,19 +42,18 @@ const MoviesList = () => {
 
     return (
         <div>
-            {isLoading ? <Box sx={{width: '100%'}} color="primary">
+            {isLoading ? <Box sx={{width: '100%', height:'100vh'}} color="primary">
                 <LinearProgress/>
             </Box> : <div className={style.MovieListHead}>
                 <div className={style.MoviesCard}>
                     {moviesList.map (movie => <MovieInfo key={movie.id} movie={movie}/>)}
                 </div>
                 <div className={style.ButtonPage}>
-                    {page != 1 &&
-                        <button disabled={page === 1} className={style.ButtonMinus} onClick={() => prevPage ()}>◀ Prev
+                    {<button disabled={page <= 1} className={style.ButtonMinus} onClick={() => prevPage ()}>◀ Prev
                             Page
                         </button>}
 
-                    {page != 500 && <button disabled={page === 500} className={style.ButtonPlus}
+                    {<button disabled={page >= 500} className={style.ButtonPlus}
                                             onClick={() => nextPage ()}>Next
                         Page ▶
                     </button>}
@@ -65,26 +65,3 @@ const MoviesList = () => {
 };
 
 export {MoviesList};
-
-//
-// {
-//     isLoading && (<Box sx={{ width: '100%' }} color="primary">
-//         <LinearProgress />
-//     </Box>)
-// }
-
-// <div>
-//     {isLoading ? <h1>Loading....</h1> : <div className={style.MovieListHead}>
-//         <div className={style.MoviesCard}>
-//             {moviesList.map (movie => <MovieInfo key={movie.id} movie={movie}/>)}
-//         </div>
-//         <div className={style.ButtonPage}>
-//
-//             <button disabled={page === 1} className={style.ButtonMinus} onClick={() => prevPage ()}>◀ Prev Page
-//             </button>
-//             <button disabled={page === 500} className={style.ButtonPlus} onClick={() => nextPage ()}>Next Page ▶
-//             </button>
-//             <div></div>
-//         </div>
-//     </div>}
-// </div>

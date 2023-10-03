@@ -13,7 +13,8 @@ const GenresFindPage = () => {
     const {id} = useParams ();
     const dispatch = useDispatch ();
     const {genresById} = useSelector (state => state.genresById)
-    const {isLoading} = useSelector (state => state.genresById)
+
+    const {isLoading} = useSelector (state => state.progress)
     const allGenres = [
         {
             "id": 28,
@@ -96,7 +97,6 @@ const GenresFindPage = () => {
 
     const [query, setQuery] = useSearchParams ({page: '1',})
     const page = query.get ('page')
-    // const page= '1'
 
     useEffect (() => {
         dispatch (GenresByIdAction.getByGenre ({id, page}))
@@ -121,7 +121,7 @@ const GenresFindPage = () => {
     return (
         <div>
             <Header/>
-            {isLoading ? <Box sx={{width: '100%'}} color="primary">
+            {isLoading ? <Box sx={{width: '100%', height:'100vh'}} color="primary">
                     <LinearProgress/>
                 </Box> :
                 <div className={style.GenreName}>
@@ -135,10 +135,10 @@ const GenresFindPage = () => {
                             {genresById.map (movie => <MovieInfo key={movie.id} movie={movie}/>)}
                         </div>
                         <div className={style.ButtonPage}>
-                            {page != 1 && <button disabled={page === 1} className={style.ButtonMinus}
+                            {<button disabled={page <= 1} className={style.ButtonMinus}
                                                   onClick={() => prevPage ()}>◀ Prev Page
                             </button>}
-                            {page != 500 && <button disabled={page === 500} className={style.ButtonPlus}
+                            {<button disabled={page >= 500} className={style.ButtonPlus}
                                                     onClick={() => nextPage ()}>Next
                                 Page ▶
                             </button>}
@@ -152,44 +152,3 @@ const GenresFindPage = () => {
 };
 
 export {GenresFindPage};
-
-
-/*{genresList.map ((genre) => <h1 key={genre.id}> {genre.id===ids ?<h2>{genre.name}</h2>}  </h1>)}*/
-
-// {genresList.map ((genre) => <h1 key={genre.id}> {genre.id===ids && <h2>{genre.name}</h2>}</h1>)}
-
-//     const {id}=useParams();
-// const [query, setQuery] = useSearchParams ({with_genres: id, page: '1'})
-// // const with_genres = query.get ('with_genres')
-// const page = +query.get (('page'))
-//
-//
-//
-// useEffect (() => {
-//     genreService.getByGenre((id),(page))
-// }, []);
-
-
-// const {id}=useParams();
-// const [query, setQuery] = useSearchParams ({with_genres: id, page: '3'})
-// // const with_genres = query.get ('with_genres')
-// const page = +query.get (('page'))
-//
-//
-//
-// useEffect (() => {
-//     genreService.getByGenre((id),(page))
-// }, []);
-
-
-//     const {id}=useParams();
-// const [query, setQuery] = useSearchParams ({with_genres: id, page: '3'})
-// // const with_genres = query.get ('with_genres')
-// const page = +query.get (('page'))
-//
-//
-//
-// useEffect (() => {
-//     genreService.getByGenre((id),(page))
-// }, []);
-

@@ -5,21 +5,21 @@ import {progressActions} from "./progressSlice";
 const initialState = {
     page: '2',
     moviesList: [],
-    isLoading: null
+    isLoading: true
 };
 
 const getAll = createAsyncThunk (
     'moviesListSlice/getAll',
     async (page, thunkAPI) => {
         try {
-            thunkAPI.dispatch(progressActions.setIsLoading(true))
+            thunkAPI.dispatch (progressActions.setIsLoading (true))
             const {data} = await moviesService.getAll (page);
             return data
         } catch
             (e) {
             return thunkAPI.rejectWithValue (e.response.data)
         } finally {
-            thunkAPI.dispatch(progressActions.setIsLoading(false))
+            thunkAPI.dispatch (progressActions.setIsLoading (false))
         }
     }
 )
@@ -34,14 +34,14 @@ const slice = createSlice ({
             const {page, results, isLoading} = action.payload;
             state.page = page
             state.moviesList = results
-            state.isLoading=isLoading
+            state.isLoading = isLoading
         })
-        .addMatcher (isPending (getAll), state => {
-            state.isLoading = true
-        })
-        .addMatcher (isFulfilled (getAll), state => {
-            state.isLoading = false
-        })
+        // .addMatcher (isPending (getAll), state => {
+        //     state.isLoading = true
+        // })
+        // .addMatcher (isFulfilled (getAll), state => {
+        //     state.isLoading = false
+        // })
 })
 
 const {reducer: moviesListReducer, actions} = slice;

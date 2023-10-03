@@ -74,6 +74,3 @@ const MoviePage = () => {
 };
 
 export {MoviePage};
-
-
-// {movie.genres?.map ((genre) => <p key={genre.id}> {genre.name}</p>)}

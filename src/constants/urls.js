@@ -28,7 +28,8 @@ const urls = {
 
     },
     searchMovies:{
-        base:(query)=>`${baseURL}/search/movie?`
+        base:(query)=>`${baseURL}/search/movie?`,
+        byPage:(query, page)=>`${baseURL}/search/movie?query=${query}&page=${page}`
         // base:(query)=>`${baseURL}/search/movie?query=${query}`
     }
 }

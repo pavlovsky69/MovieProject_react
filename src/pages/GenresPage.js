@@ -20,7 +20,7 @@ const GenresPage = () => {
     return (
         <div>
             <Header/>
-            {isLoading ? <Box sx={{width: '100%'}} color="primary">
+            {isLoading ? <Box sx={{width: '100%', height:'100vh'}} color="primary">
                 <LinearProgress/>
             </Box> : <div className={style.GenresContainer}>
                 <div className={style.GenresListBlock}>
@@ -34,12 +34,12 @@ const GenresPage = () => {
 export {GenresPage};
 
 
+
+
 //
 // const [query, setQuery] = useSearchParams ({with_genres: '37', page:'1'})
 // const with_genres = +query.get ('with_genres')
 // const page = +query.get(('page'))
-//
-//
 //
 // useEffect (() => {
 //     genreService.getByGenre ({with_genres}, {page})
