@@ -1,4 +1,5 @@
 .GenresContainer{
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,4 +15,5 @@
     align-items: center;
     flex-wrap: wrap;
     margin-top: 10px;
+    padding-bottom: 50px;
 }
