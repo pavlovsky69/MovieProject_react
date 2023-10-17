@@ -41,7 +41,7 @@ const MoviesList = () => {
 
 
     return (
-        <div>
+        <div className={style.BigBoxMovies}>
             {isLoading ? <Box sx={{width: '100%', height:'100vh'}} color="primary">
                 <LinearProgress/>
             </Box> : <div className={style.MovieListHead}>

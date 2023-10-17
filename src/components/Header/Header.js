@@ -25,12 +25,12 @@ const Header = () => {
                     </div>
                     <NavLink className={style.button} to={AppRoutes.MainUrl}>Movies</NavLink>
                     <NavLink className={style.button} to={AppRoutes.GenreListUrl}>Genres</NavLink>
-                    <button className={style.button1}
+                    <div className={style.button1}
                             onClick={() => dispatch (searchActions.changeSearchCheck ())}>Search
-                    </button>
+                    </div>
                     {/*<NavLink className={style.button} to={AppRoutes.SearchPage}>Search</NavLink>*/}
                     <div className={style.themeSwitcher}>
-                        <Switch className={style.switch} defaultChecked={themeCheck}
+                        <Switch  size={'small'} className={style.switch} defaultChecked={themeCheck}
                                 onChange={() => dispatch (themeActions.changeThemeCheck ())}/>
                         {themeCheck ? <p className={style.titleTheme}>Dark Theme</p> :
                             <p className={style.titleTheme}>Light Theme</p>}

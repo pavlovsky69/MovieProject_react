@@ -18,7 +18,7 @@ const GenresPage = () => {
     }, []);
 
     return (
-        <div>
+        <div className={style.BigGenreBox}>
             <Header/>
             {isLoading ? <Box sx={{width: '100%', height:'100vh'}} color="primary">
                 <LinearProgress/>

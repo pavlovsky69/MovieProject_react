@@ -1,5 +1,5 @@
 
-.MainGenreBlock{
+.MainGenreBlock {
     width: 19%;
     height: 160px;
     display: flex;
@@ -10,10 +10,10 @@
     transition: 0.2s;
 }
 
-.GenreTitleBlock{
+.GenreTitleBlock {
 }
 
-.TitleGenre{
+.TitleGenre {
     text-align: center;
 }
 
@@ -24,3 +24,36 @@
     padding: 0;
     margin: 0;
 }
+
+
+@media screen and (max-width: 980px) {
+    /*.MainGenreBlock {*/
+    /*    width: 15%;*/
+    /*}*/
+
+    .TitleGenre {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .MainGenreBlock {
+        width: 24%;
+    }
+}
+
+
+
+@media screen and (max-width: 556px) {
+    .TitleGenre {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 456px) {
+    .MainGenreBlock {
+        width: 33%;
+    }
+}
+
+

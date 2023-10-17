@@ -4,10 +4,12 @@ import {useSelector} from "react-redux";
 
 
 const MainPage = () => {
-    const {themeCheck} = useSelector(state => state.theme);
+    const {themeCheck} = useSelector (state => state.theme);
     return (
-        <div className={themeCheck? style.white:style.black}>
-            <Outlet/>
+        <div className={style.MainPage}>
+            <div className={themeCheck ? style.white : style.black}>
+                <Outlet/>
+            </div>
         </div>
     );
 };

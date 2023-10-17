@@ -1,5 +1,8 @@
-.GenresContainer{
+.BigGenreBox{
     height: auto;
+}
+
+.GenresContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;

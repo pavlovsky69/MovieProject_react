@@ -20,7 +20,7 @@ const MovieInfo = ({movie}) => {
                         <ReactStars
                             count={10}
                             value={vote_average}
-                            size={23}
+                            size={18}
                             activeColor="#ffd700"
                             isHalf={true}
                             edit={false}
