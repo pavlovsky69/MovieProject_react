@@ -52,13 +52,16 @@ const SearchPage = () => {
                         </div>
 
                         <div className={style.ButtonPage}>
-                            <div className={style.CurrentPage}><h4>Current page: {page}</h4></div>
+                            {/*<div className={style.CurrentPage}><h4>Current page: {page}</h4></div>*/}
                             {<button disabled={page === 1} className={style.ButtonMinus} onClick={() => prevPage ()}>◀
                                 Prev Page
                             </button>}
                             {<button disabled={page === total_pages} className={style.ButtonPlus}
                                      onClick={() => nextPage ()}>Next Page ▶
                             </button>}
+                        </div>
+                        <div className={style.PageCount}>
+                            <div className={style.CurrentPage}><h4>Current page: {page}</h4></div>
                             <div className={style.TotalPage}><h4>Total pages: {total_pages}</h4></div>
                         </div>
 
