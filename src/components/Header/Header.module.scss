@@ -75,6 +75,11 @@
   color: snow;
 }
 
+.titleH1:hover {
+  color: #ffd700;
+  border-bottom: 1px solid #ffd700;
+}
+
 .titleTheme {
   color: #ffd700;
   font-size: 12px;
@@ -103,24 +108,19 @@
 }
 
 
-
-
-
-
 @media screen and (max-width: 820px) {
   .headerBar {
-    width: 100vw;
     height: 50px;
   }
   .button {
-    font-size: 12px;
+    font-size: 16px;
     margin: 0 10px 0 10px;
     padding: 0;
   }
 
   .button1 {
-    font-size: 12px;
-    margin: 0;
+    font-size: 16px;
+    margin: 0 0 0 10px;
     width: 45px;
     padding: 0;
   }
@@ -146,7 +146,7 @@
 
   }
 
-  .logoUser{
+  .logoUser {
     right: 15px;
   }
 
@@ -155,17 +155,50 @@
   }
 
 
-  .imageUser{
+  .imageUser {
     height: 20px;
   }
+
+  .userTitle {
+    font-size: 8px;
+    margin: 2px 0 0 0;
+  }
+
 }
 
 
-
 @media screen and (max-width: 420px) {
+
   .titleTheme {
     font-size: 6px;
     position: relative;
     left: -3px;
   }
+  .userTitle {
+    font-size: 8px;
+    margin: 2px 0 0 0;
+  }
+
+}
+
+
+@media screen and (max-width: 344px) {
+  .titleH1 {
+    font-size: 10px;
+  }
+
+  .button {
+    margin: 0 4px 0 4px;
+    font-size: 12px;
+  }
+  .button1 {
+    font-size: 12px;
+    margin-left: 0;
+  }
+
+  .userTitle {
+    font-size: 8px;
+    margin: 2px 0 0 0;
+  }
+
 }

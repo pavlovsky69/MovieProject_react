@@ -113,7 +113,7 @@
   }
 
   .PosterImage:hover {
-    height: 280px;
+    height: 240px;
     width: 160px;
     //box-shadow: 1px 1px 8px 1px #ffffff;
     //box-shadow: 1px 1px 10px #ffffff;
@@ -123,6 +123,34 @@
   .MovieTitle {
     width: 166px;
     font-size: 11px;
+  }
+
+}
+
+
+@media screen and (max-width: 344px) {
+  .OneMoviesCard{
+    height: 290px;
+    width: 150px;
+    margin: 4px;
+  }
+
+  .PosterImage {
+    height: 220px;
+    width: 150px;
+  }
+
+  .PosterImage:hover {
+    height: 220px;
+    width: 150px;
+    //box-shadow: 1px 1px 8px 1px #ffffff;
+    //box-shadow: 1px 1px 10px #ffffff;
+  }
+
+
+  .MovieTitle {
+    width: 148px;
+    font-size: 10px;
   }
 
 }

@@ -27,7 +27,7 @@ const MoviePage = () => {
             {isLoading ? <Box sx={{width: '100%'}} color="primary">
                     <LinearProgress/>
                 </Box> :
-                <div>
+                <div className={style.BigContainerBox}>
                     <div className={style.ContainerBox}>
                         <div className={style.ImagePoster}>
                             <img src={urls.moviesPoster.base + movie.backdrop_path} className={style.Poster}
@@ -36,13 +36,27 @@ const MoviePage = () => {
 
 
                         <div className={style.TextContainerBox}>
-                            <h1>{movie.title}</h1>
+                            <h1 className={style.TitleMovie}>{movie.title}</h1>
                             <div className={style.GenreTitleBlock}>
                                 <div className={style.GenreTitle}>
-                                    <h3 className={style.boldTextP}>Genres:</h3>
-                                    {movie.genres?.map ((genre) => <h4 className={style.GenreTitleP} key={genre.id}
-                                                                       onClick={() => navigate (
-                                                                           AppRoutes.GenreFind + (genre.id))}>{genre.name}</h4>)}
+                                    <div className={style.BoxGenres}>
+                                        <h3 className={style.boldTextP}>Genres:</h3>
+                                        {movie.genres?.map ((genre) => <h3 className={style.GenreTitleP} key={genre.id}
+                                                                           onClick={() => navigate (
+                                                                               AppRoutes.GenreFind + (genre.id))}>{genre.name}</h3>)}
+                                    </div>
+                                </div>
+                                <div className={style.RatingBox}><p className={style.RatingName}>Rating:</p>
+                                    <ReactStars
+                                        count={10}
+                                        value={movie.vote_average}
+                                        size={22}
+                                        activeColor="#ffd700"
+                                        isHalf={true}
+                                        edit={false}
+                                        classNames={style.Stars}
+                                    />
+                                    <p className={style.ratingInfo}>{movie.vote_average}</p>
                                 </div>
                             </div>
                             <div className={style.Information}>
@@ -51,23 +65,33 @@ const MoviePage = () => {
                                 {movie.budget != 0 && <p className={style.smallInfo}>Budget: {movie.budget}$</p>}
                                 {movie.revenue != 0 && <p className={style.smallInfo}>Revenue: {movie.revenue}$</p>}
                             </div>
-                            <div className={style.RatingBox}><p className={style.RatingName}>Rating:</p>
-                                <ReactStars
-                                    count={10}
-                                    value={movie.vote_average}
-                                    size={25}
-                                    activeColor="#ffd700"
-                                    isHalf={true}
-                                    edit={false}
-                                    classNames={style.Stars}
-                                />
-                            </div>
+
                         </div>
                     </div>
                     <div className={style.OverviewBlock}>
-                        <p>Overview:</p>
+                        <p className={style.boldTextP}>Overview:</p>
                         <p className={style.OverviewText}>{movie.overview}</p>
                     </div>
+
+                    <div className={style.InfoPlusBlock}>
+                        <div className={style.InfoPlus1}>
+                            <p className={style.boldTextP}>Homepage:</p>
+
+                            <a className={style.UrlA} href={movie.homepage}>{movie.homepage}</a>
+                        </div>
+                        <div className={style.InfoPlus2}>
+                            <p className={style.boldTextP}>Status: </p>
+                            <p>{movie.status}</p>
+                        </div>
+                        <div className={style.AnotherPosterBlock}>
+                            <img src={urls.moviesPoster.base + movie.poster_path} className={style.AnotherPoster}
+                                 alt="logo"/>
+                        </div>
+                    </div>
+
+
+
+
                 </div>}
         </div>
     );

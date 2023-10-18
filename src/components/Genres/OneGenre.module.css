@@ -18,7 +18,7 @@
 }
 
 .MainGenreBlock:hover {
-    transition: 0.3s;
+    transition: 0.2s;
     background-color: #464646;
     border: 1px solid #ffd700;
     padding: 0;
@@ -39,6 +39,7 @@
 @media screen and (max-width: 720px) {
     .MainGenreBlock {
         width: 24%;
+        /*height: 100px;*/
     }
 }
 
@@ -48,11 +49,17 @@
     .TitleGenre {
         font-size: 14px;
     }
+
+
 }
 
+
+
 @media screen and (max-width: 456px) {
+
     .MainGenreBlock {
         width: 33%;
+        height: 100px;
     }
 }
 
