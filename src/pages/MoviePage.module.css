@@ -125,6 +125,7 @@ p {
 
 .UrlA{
     text-decoration: none;
+    color: gold;
 }
 
 @media screen and (max-width: 1280px) {
@@ -251,8 +252,8 @@ p {
 
     .OverviewText {
         text-align: left;
-        font-size: 14px;
-        font-weight: lighter;
+        font-size: 18px;
+        font-weight: normal;
     }
 
     .InfoPlusBlock {
@@ -291,6 +292,12 @@ p {
         text-align: center;
     }
 
+    .OverviewText {
+        text-align: left;
+        font-size: 16px;
+        font-weight: normal;
+    }
+
     .Poster {
         width: 80%;
         height: unset;
@@ -313,24 +320,29 @@ p {
 
     .boldTextP {
         font-weight: bold;
-        font-size: 14px;
+        font-size: 16x;
     }
 
     .GenreTitle {
 
     }
 
+    .OverviewText {
+        text-align: left;
+        font-size: 16px;
+        font-weight: normal;
+    }
     .BoxGenres {
     }
 
     .GenreTitleP {
         margin-left: 4px;
         padding: 1px;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .Information {
@@ -354,6 +366,12 @@ p {
 
     .OverviewBlock {
         margin-left: 10px;
+    }
+
+    .OverviewText {
+        text-align: left;
+        font-size: 14px;
+        font-weight: normal;
     }
 
     .boldTextP {
@@ -383,9 +401,12 @@ p {
 
 
 @media screen and (max-width: 400px) {
+    p{
+        font-size: 14px;
+    }
     .boldTextP {
         font-weight: bold;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .GenreTitleP {
@@ -393,6 +414,13 @@ p {
         padding: 1px;
         font-size: 12px;
     }
+
+    .OverviewText {
+        text-align: left;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
 
 }
 
