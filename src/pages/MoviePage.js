@@ -75,7 +75,7 @@ const MoviePage = () => {
 
                     <div className={style.InfoPlusBlock}>
                         <div className={style.InfoPlus1}>
-                            <p className={style.boldTextP}>Homepage:</p>
+                            <h3 className={style.boldTextP}>Homepage:</h3>
 
                             <a className={style.UrlA} href={movie.homepage}>{movie.homepage}</a>
                         </div>

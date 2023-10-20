@@ -50,6 +50,8 @@ p {
 
 .BoxGenres {
     display: flex;
+    max-width: 99%;
+    flex-wrap: wrap;
 }
 
 .GenreTitleP {
@@ -97,7 +99,8 @@ p {
 }
 
 .OverviewText {
-    margin-top: 5px;
+    margin-top: 10px;
+    line-height: 140%;
 }
 
 .smallInfo {
@@ -123,12 +126,15 @@ p {
     border-radius: 6px;
 }
 
-.UrlA{
+.UrlA {
     text-decoration: none;
     color: gold;
 }
 
 @media screen and (max-width: 1280px) {
+    .BoxGenres{
+        margin-top: 10px;
+    }
     .TextContainerBox {
         width: 96%;
         margin: 0 0 0 20px;
@@ -141,11 +147,6 @@ p {
     .GenreTitleP {
         margin-left: 10px;
         font-size: 18px;
-    }
-
-    .ImagePoster {
-        /*display: flex;*/
-        /*object-fit: fill;*/
     }
 
     .Poster {
@@ -170,21 +171,18 @@ p {
 @media screen and (max-width: 1080px) {
     .GenreTitleP {
         margin-left: 8px;
-        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 960px) {
     .GenreTitleP {
         margin-left: 6px;
-        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 870px) {
     .GenreTitleP {
         margin-left: 4px;
-        font-size: 12px;
     }
 }
 
@@ -214,7 +212,7 @@ p {
 
     .GenreTitleP {
         margin-left: 6px;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .TextContainerBox {
@@ -230,7 +228,7 @@ p {
     }
 
     .Poster {
-        width: 70%;
+        width: 80%;
         height: unset;
         /*object-fit: contain;*/
     }
@@ -266,35 +264,50 @@ p {
         justify-content: center;
     }
 
-    .AnotherPoster{
-        width: 40%;
+    .AnotherPoster {
+        width:80%;
+    }
+
+    .boldTextP{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 18px;
     }
 
 
 }
 
 @media screen and (max-width: 556px) {
+
+    .TextContainerBox{
+        margin-top: 20px;
+    }
     .TitleMovie {
         margin: 0 10px 0 10px;
-        font-size: 20px;
+        font-size: 22px;
         text-align: center;
+        width: 96%;
     }
-
+    .GenreTitle{
+        margin-top: 15px;
+    }
     .GenreTitleP {
         margin-left: 6px;
         padding: 2px;
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .OverviewBlock {
-        margin: 15px 10px 0 15px;
+        margin: 20px 10px 0 15px;
         width: 94%;
         text-align: center;
     }
 
     .OverviewText {
         text-align: left;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: normal;
     }
 
@@ -310,48 +323,51 @@ p {
         justify-content: center;
     }
 
-    .AnotherPoster{
-        width: 50%;
+    .AnotherPoster {
+        width: 80%;
+    }
+    p{
+        font-size: 18px;
     }
 }
 
 
 @media screen and (max-width: 520px) {
 
+
     .boldTextP {
         font-weight: bold;
-        font-size: 16x;
-    }
-
-    .GenreTitle {
-
+        font-size: 18px;
     }
 
     .OverviewText {
         text-align: left;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: normal;
-    }
-    .BoxGenres {
     }
 
     .GenreTitleP {
         margin-left: 4px;
         padding: 1px;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     p {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .Information {
-        margin-top: 10px;
+        margin-top: 20px;
     }
 }
 
 
 @media screen and (max-width: 456px) {
+    .BoxGenres{
+        max-width: 99%;
+        display: flex;
+        flex-wrap: wrap;
+    }
     .BigContainerBox {
         margin-top: 20px;
     }
@@ -362,27 +378,34 @@ p {
 
     .Information {
         margin-left: 10px;
+        margin-top: 30px;
     }
 
     .OverviewBlock {
         margin-left: 10px;
+        margin-top: 30px;
     }
 
+    .TitleMovie{
+        font-size: 24px;
+    }
     .OverviewText {
         text-align: left;
-        font-size: 14px;
         font-weight: normal;
+        font-size: 18px;
     }
 
     .boldTextP {
         font-weight: bold;
-        font-size: 14px;
+        font-size: 20px;
     }
 
     .GenreTitleP {
         margin-left: 4px;
-        padding: 1px;
-        font-size: 14px;
+        padding: 2px;
+        width: auto;
+        font-size: 18px;
+        /*border: 1px solid gold;*/
     }
 
     .Poster {
@@ -390,35 +413,57 @@ p {
     }
 
     p {
-        font-size: 12px;
+        /*font-size: 16px;*/
     }
 
     .InfoPlusBlock {
         margin-left: 10px;
+    }
+    .AnotherPoster{
+        width: 90%;
     }
 
 }
 
 
 @media screen and (max-width: 400px) {
-    p{
-        font-size: 14px;
+    .GenreTitleBlock{
+        margin-top: 1%;
     }
+
+    .GenreTitleB{
+        margin: 0;
+    }
+
+    .BoxGenres{
+        margin: 0;
+    }
+    p {
+        font-size: 16px;
+    }
+
     .boldTextP {
         font-weight: bold;
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .GenreTitleP {
-        margin-left: 2px;
-        padding: 1px;
-        font-size: 12px;
+        margin-left: 4px;
+        padding: 2px;
+        font-size: 16px;
     }
 
     .OverviewText {
         text-align: left;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: normal;
+    }
+    .RatingName{
+        margin-right: 0;
+        padding-right: 5px;
+    }
+    .ratingInfo{
+        margin-left: 5px;
     }
 
 

@@ -179,26 +179,71 @@
     margin: 2px 0 0 0;
   }
 
+  #buttonFirst{
+    margin-left: 8%;
+  }
+
+  .button1 {
+    font-size: 16px;
+    width: 45px;
+  }
+
 }
+
+@media screen and (max-width: 370px) {
+  #buttonFirst{
+    margin-left: 8%;
+  }
+}
+
 
 
 @media screen and (max-width: 344px) {
   .titleH1 {
-    font-size: 10px;
+    font-size: 11px;
   }
-
   .button {
     margin: 0 4px 0 4px;
-    font-size: 12px;
+    font-size: 14px;
   }
+  #buttonFirst{
+    margin-left: 10%;
+  }
+
   .button1 {
-    font-size: 12px;
-    margin-left: 0;
+    font-size: 14px;
+    margin-left: 4px;
   }
 
   .userTitle {
     font-size: 8px;
     margin: 2px 0 0 0;
+  }
+
+}
+@media screen and (max-width: 286px) {
+  .headerBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button{
+    font-size: 12px;
+    margin: 0 0 0 0;
+    padding: 0;
+  }
+
+  #buttonFirst{
+    margin-left: 0;
+    margin-top: 4px;
+    font-size: 12px;
+  }
+  .button1{
+    font-size: 12px;
+    margin: 0 0 4px 0;
+    padding: 0;
   }
 
 }

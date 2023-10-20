@@ -23,7 +23,7 @@ const Header = () => {
                     <div className={style.titleClass} onClick={() => navigate (AppRoutes.MainUrl)}>
                         <h1 className={style.titleH1}>The MovieDB</h1>
                     </div>
-                    <NavLink className={style.button} to={AppRoutes.MainUrl}>Movies</NavLink>
+                    <NavLink className={style.button} id={style.buttonFirst} to={AppRoutes.MainUrl}>Movies</NavLink>
                     <NavLink className={style.button} to={AppRoutes.GenreListUrl}>Genres</NavLink>
                     <div className={style.button1}
                             onClick={() => dispatch (searchActions.changeSearchCheck ())}>Search
